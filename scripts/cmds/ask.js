@@ -15,7 +15,7 @@ async function getAIResponse(input, userName, userId, messageID) {
     { url: 'https://ai-chat-gpt-4-lite.onrender.com/api/hercai', params: { question: input } }
   ];
 
-  let response = `◕𝗔𝗫𝗘𝗟 𝗦𝗠𝗜𝗧𝗛◕✖ \n●═══════════●\n𝗛𝗲𝗹𝗹𝗼 𝗮𝘀 𝗮 𝘃𝗶𝗿𝘁𝘂𝗮𝗹 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝘄𝗵𝗮𝘁 𝗰𝗮𝗻 𝗜 𝗱𝗼 𝘁𝗼 𝗵𝗲𝗹𝗽`;
+  let response = `Otenins\n●═══════════●\n𝗛𝗲𝗹𝗹𝗼 𝗮𝘀 𝗮 𝘃𝗶𝗿𝘁𝘂𝗮𝗹 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝘄𝗵𝗮𝘁 𝗰𝗮𝗻 𝗜 𝗱𝗼 𝘁𝗼 𝗵𝗲𝗹𝗽`;
   let currentIndex = 0;
 
   for (let i = 0; i < services.length; i++) {
@@ -42,7 +42,7 @@ module.exports = {
   onStart: async function ({ api, event, args }) {
     const input = args.join(' ').trim();
     if (!input) {
-      api.sendMessage("◕𝗔𝗫𝗘𝗟 𝗦𝗠𝗜𝗧𝗛◕✖\n ●═══════════●\n𝗛𝗲𝗹𝗹𝗼 𝗮𝘀 𝗮 𝘃𝗶𝗿𝘁𝘂𝗮𝗹 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝘄𝗵𝗮𝘁 𝗰𝗮𝗻 𝗜 𝗱𝗼 𝘁𝗼 𝗵𝗲𝗹𝗽  ✰..✰", event.threadID, event.messageID);
+      api.sendMessage("Otenins\n ●═══════════●\n𝗛𝗲𝗹𝗹𝗼 𝗮𝘀 𝗮 𝘃𝗶𝗿𝘁𝘂𝗮𝗹 𝗮𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝘄𝗵𝗮𝘁 𝗰𝗮𝗻 𝗜 𝗱𝗼 𝘁𝗼 𝗵𝗲𝗹𝗽  ✰..✰", event.threadID, event.messageID);
       return;
     }
 
@@ -53,7 +53,7 @@ module.exports = {
       }
       const userName = ret[event.senderID].name;
       const { response, messageID } = await getAIResponse(input, userName, event.senderID, event.messageID);
-      api.sendMessage(`✰. ◕𝗔𝗫𝗘𝗟 𝗦𝗠𝗜𝗧𝗛◕✖ .✰:\n●═══════════●\n\n${response}\n\n╰┈┈┈➤⊹⊱✰✫✫✰⊰⊹`, event.threadID, messageID);
+      api.sendMessage(`Otenins:\n●═══════════●\n\n${response}\n\n╰┈┈┈➤⊹⊱✰✫✫✰⊰⊹`, event.threadID, messageID);
     });
   },
   onChat: async function ({ api, event, message }) {
